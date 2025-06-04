@@ -4,7 +4,7 @@ const PORT = 3000;
 
 // Rota principal
 app.get('/', (req, res) => {
-  res.send('Olá, mundo! Meu primeiro projeto com Node.js e Express.');
+  res.send('Olá, seja bem vindo e aproveite as rotas deste site, que estão descritas na README do repositório no GitHub');
 });
 
 app.get('/ola/:nome', (req, res) => {
@@ -15,9 +15,9 @@ app.get('/ola/:nome', (req, res) => {
 app.get('/boa-noite/:nome', (req, res) => {
     const nome = req.params.nome
     const hora = new Date().getHours();
-    
+
     let saudacao = hora >= 6 && hora < 18 ? 'Bom dia' : 'Boa noite';
-  res.send(`${saudacao}, ${nome}!`);
+    res.send(`${saudacao}, ${nome}! Que nome lindo!`);
 })
 
 // Iniciar o servidor
